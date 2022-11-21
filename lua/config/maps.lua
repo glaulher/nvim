@@ -47,8 +47,13 @@ keymap.set("n", "<C-f>", function()
   multirg()
 end) --Normal
 
--- ZenMode (full screen in terminal)
-vim.keymap.set('n', '<C-m>', '<cmd>ZenMode<cr>', { silent = true })
+-- copy and paste
+keymap.set("x", "<C-c>","y<CR>", { silent = true }) --Visual
+keymap.set("x", "<C-v>","p<CR>", { silent = true }) --Visual
+keymap.set("i", "<C-v>","<ESC>:-1<CR>p<CR>", { silent = true }) --Insert
+keymap.set("i", "<C-c>","<ESC>yy<CR>", { silent = true }) --Insert
+keymap.set("n", "<C-c>","yy<CR>", { silent = true }) --Normal
+-- Use p to paste Normal mode
 
 -- Move line
 keymap.set("x", "<C-UP>", ":move '<-2<CR>gv-gv", { silent = true }) --Visual
@@ -81,3 +86,9 @@ vim.cmd([[ nnoremap e :edit<CR>]]) -- Reset Bug Fold colapse
 --  Make sense to be related to your opleader.block
 --
 --Key tt
+
+-- ZenMode (full screen in terminal)
+-- :ZenMode
+
+
+
