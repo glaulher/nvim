@@ -1,19 +1,7 @@
--- local fn = vim.fn
--- local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
--- if fn.empty(fn.glob(install_path)) > 0 then
---   packer_bootstrap = fn.system({
---     "git",
---     "clone",
---     "--depth",
---     "1",
---     "https://github.com/wbthomason/packer.nvim",
---     install_path,
---   })
--- end
-
 local status, packer = pcall(require, "packer")
 if (not status) then
   print("Packer is not installed")
+  vim.cmd [[!git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim]]
   return
 end
 -- vim.api.nvim_command("packadd packer.nvim")
@@ -23,19 +11,8 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'nvim-lua/plenary.nvim' -- Common utilities
+  use { 'goolord/alpha-nvim' } -- Dashboard
 
-  -- Color Scheme
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
-  use 'norcalli/nvim-colorizer.lua'
-  use 'nvim-lualine/lualine.nvim' -- Statusline
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-  use 'kyazdani42/nvim-web-devicons' -- File icons
 
   -- Completions
   --  use({
@@ -53,6 +30,8 @@ packer.startup(function(use)
   --      { "rafamadriz/friendly-snippets" },
   --    },
   --  })
+
+
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion
@@ -72,7 +51,10 @@ packer.startup(function(use)
 
 
   -- Toggle Terminal
-  use 'akinsho/toggleterm.nvim'
+  -- use 'akinsho/toggleterm.nvim'
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end }
 
   -- File Search
   use {
@@ -85,17 +67,41 @@ packer.startup(function(use)
   --   cmd = "Telescope",
   -- })
 
-  use 'nvim-telescope/telescope-file-browser.nvim'
+  --  use { 'nvim-telescope/telescope-file-browser.nvim' }
+
+  --  use { 'stevearc/dressing.nvim', requires = 'MunifTanjim/nui.nvim' } -- Use with session-manager
+  --  use 'Shatur/neovim-session-manager'
 
   use 'folke/zen-mode.nvim'
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-  use 'akinsho/nvim-bufferline.lua'
+  use { 'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons' }
 
   -- Git
   -- use 'github/copilot.vim'
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
+  use 'dinhhuy258/git.nvim' -- For git blame & browser
+
+  -- Color Scheme
+  use { 'folke/tokyonight.nvim' }
+  use 'norcalli/nvim-colorizer.lua'
+  use 'nvim-lualine/lualine.nvim' -- Statusline
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'lukas-reineke/indent-blankline.nvim' -- Ident Line
+  use { 'p00f/nvim-ts-rainbow', after = { 'nvim-treesitter' } } -- Colors Brackets
+  use { 'numToStr/Comment.nvim' }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  use {
+    'nvim-tree/nvim-tree.lua', --File dir
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+  }
 end)

@@ -2,6 +2,19 @@ local status, ts = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
 ts.setup {
+  context_commentstring = { -- Used nvim-ts-context-commentstring
+    enable = true,
+    config = {
+      javascript = {
+        __default = '// %s',
+        jsx_element = '{/* %s */}',
+        jsx_fragment = '{/* %s */}',
+        jsx_attribute = '// %s',
+        comment = '// %s',
+        typescript = { __default = '// %s', __multiline = '/* %s */' }
+      }
+    }
+  }, -- end nvim-ts-context-commentstring
   highlight = {
     enable = true,
     disable = {},
@@ -12,7 +25,7 @@ ts.setup {
   },
   ensure_installed = {
     "tsx",
-    "fish",
+    "bash",
     "json",
     "yaml",
     "css",

@@ -11,7 +11,7 @@ null_ls.setup({
     null_ls.builtins.diagnostics.eslint_d.with({
       diagnostics_format = '[eslint]\n #{m}\n(#{c})'
     }),
-    null_ls.builtins.diagnostics.fish,
+    null_ls.builtins.diagnostics.zsh,
     formatting.prettier,
   },
   on_attach = function(client, bufnr)
