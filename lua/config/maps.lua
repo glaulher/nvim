@@ -47,6 +47,9 @@ keymap.set("n", "<C-f>", function()
   multirg()
 end) --Normal
 
+-- ZenMode (full screen in terminal)
+vim.keymap.set('n', '<C-m>', '<cmd>ZenMode<cr>', { silent = true })
+
 -- Move line
 keymap.set("x", "<C-UP>", ":move '<-2<CR>gv-gv", { silent = true }) --Visual
 keymap.set("x", "<C-DOWN>", ":move '>+1<CR>gv-gv", { silent = true }) --Visual
