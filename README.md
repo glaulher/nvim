@@ -60,7 +60,7 @@ Debian:
 sudo apt install xclip fzf ripgrep build-essential
 ```
 
-Download package [neovim](https://github.com/neovim/neovim/releases)
+Download package [neovim](https://github.com/neovim/neovim/releases) open terminal:
 
 ```bash
 cd ~/Downloads
