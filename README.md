@@ -135,6 +135,10 @@ I - insert
 | za        | 𝐍       | Fold code               |
 | tb        | 𝐕       | comment line            |
 | tt        | 𝐕       | comment block           |
+| ctrl+t    | 𝐍       | ToggleTerm vertical     |
+| alt+1     | 𝐍       | ToggleTerm float        |
+| alt+2     | 𝐍       | ToggleTerm mem          |
+| Alt+3     | 𝐍       | ToggleTerm htop         |
 
 ZenMode enter command mode
 
