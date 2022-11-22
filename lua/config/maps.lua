@@ -3,6 +3,22 @@
 local multirg = require('config.telescope-multi-rg')
 local keymap = vim.keymap
 
+-- Remap space as leader key
+--map('', '<Space>', '<Nop>') -- Unmap space
+--vim.g.mapleader = ' '
+--vim.g.maplocalleader = ' '
+
+-- Mutli Cursors Binds alt+d (like ctrl+d in subl)
+vim.cmd([[
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<C-d>' 
+let g:VM_maps['Find Subword Under'] = '<C-d>'
+]])
+--vim.cmd([[let g:VM_maps['Add Cursor Down'] = '<M-n>']])
+--vim.cmd([[let g:VM_maps['Add Cursor Up'] = '<M-p>'  ]])
+
+
+
 keymap.set('n', 'x', '"_x')
 
 -- Increment/decrement

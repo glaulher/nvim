@@ -45,6 +45,7 @@ Requirements: Neovim | Lua
 - [nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) - A file explorer tree for neovim written in lua
 - [p00f/nvim-ts-rainbow instead](https://github.com/p00f/nvim-ts-rainbow) - Rainbow parentheses for neovim using tree-sitter
 - [akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) -  A neovim lua plugin to help easily manage multiple terminal windows
+- [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi) - Multiple cursors plugin for vim/neovim
 
 ---
 
@@ -139,6 +140,7 @@ I - insert
 | alt+1     | 𝐍       | ToggleTerm float        |
 | alt+2     | 𝐍       | ToggleTerm mem          |
 | Alt+3     | 𝐍       | ToggleTerm htop         |
+| ctrl+d    | 𝐍       | Multi cursor            |
 
 ZenMode enter command mode
 

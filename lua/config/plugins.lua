@@ -73,6 +73,7 @@ packer.startup(function(use)
   --  use 'Shatur/neovim-session-manager'
 
   use 'folke/zen-mode.nvim'
+  use 'mg979/vim-visual-multi' --multi cursor
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
