@@ -105,7 +105,46 @@ git clone https://github.com/glaulher/nvim ~/.config/nvim --depth 1 && nvim
 
 ---
 
+## keybinds
 
+N - normal
+
+V -  visual
+
+I - insert
+
+| Key       | Mode     | Action                  |
+| --------- | -------- | ----------------------- |
+| +         | 𝐍       | Increment               |
+| -         | 𝐍       | Decrement               |
+| ctrl+a    | 𝐍       | Select all              |
+| te        | 𝐍       | New tab                 |
+| ss        | 𝐍       | Split window horizontal |
+| sv        | 𝐍       | Split window vertical   |
+| Space     | 𝐍       | move between windows    |
+| ctrl+n    | 𝐍 𝐕 𝐈 | NvimTree                |
+| q         | 𝐍       | Close                   |
+| Shift+q   | 𝐍       | Force close             |
+| ctrl+f    | 𝐍       | Search word             |
+| ctrl+c    | 𝐍 𝐕 𝐈 | Copy                    |
+| ctrl+v    | 𝐕 𝐈    | paste                   |
+| p         | 𝐍       | paste                   |
+| ctrl+up   | 𝐍 𝐕 𝐈 | move text up            |
+| ctrl+down | 𝐍 𝐕 𝐈 | move text down          |
+| ctrl+s    | 𝐍 𝐕 𝐈 | Save                    |
+| za        | 𝐍       | Fold code               |
+| tb        | 𝐕       | comment line            |
+| tt        | 𝐕       | comment block           |
+
+ZenMode enter command mode
+
+```lua
+:ZenMode
+```
+
+
+
+---
 
 ## About me
 
