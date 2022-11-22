@@ -117,4 +117,4 @@ git clone https://github.com/glaulher/nvim ~/.config/nvim --depth 1 && nvim
 
 ## Useful Sources and Links
 
-I'm inspired by [amy-juan-li](https://github.com/amy-juan-li/nvim-lua), she's inspired by [Takuya Matsuyama](https://github.com/craftzdog/dotfiles -public) and the beautiful workflow used by your coding projects. I borrow heavily from both codes to build my current Neovim-based workflow. So check your public repositories.
+I'm inspired by [amy-juan-li](https://github.com/amy-juan-li/nvim-lua), she's inspired by [ Takuya Matsuyama ](https://github.com/craftzdog/dotfiles -public) and the beautiful workflow used by your coding projects. I borrow heavily from both codes to build my current Neovim-based workflow. So check your public repositories.
