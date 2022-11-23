@@ -51,10 +51,10 @@ packer.startup(function(use)
 
 
   -- Toggle Terminal
-  -- use 'akinsho/toggleterm.nvim'
-  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end }
+  use 'akinsho/toggleterm.nvim'
+--  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+--    require("toggleterm").setup()
+--  end }
 
   -- File Search
   use {
