@@ -1,3 +1,4 @@
+-- vim.lsp.set_log_level("debug")
 ---
 -- Global Config
 ---
@@ -5,8 +6,8 @@ local status, lspconfig = pcall(require, "lspconfig")
 if (not status) then return end
 
 local lsp_defaults = lspconfig.util.default_config
-local protocol = require('vim.lsp.protocol')
 
+-- format on save
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 local enable_format_on_save = function(_, bufnr)
   vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
@@ -51,7 +52,7 @@ end
 lsp_defaults.capabilities = vim.tbl_deep_extend(
   'force',
   lsp_defaults.capabilities,
-  require('cmp_nvim_lsp').default_capabilities(protocol.make_client_capabilities())--merge the defaults lspconfig provides with the capabilities nvim-cmp
+  require('cmp_nvim_lsp').default_capabilities()--merge the defaults lspconfig provides with the capabilities nvim-cmp
 ),
 
 ---
@@ -72,28 +73,32 @@ lspconfig.tsserver.setup {
 
 lspconfig.sourcekit.setup {
   on_attach = on_attach,
+  capabilities = lsp_defaults.capabilities
 }
 
-local tw_highlight = require('tailwind-highlight')
-lspconfig.tailwindcss.setup({
-  on_attach = function(client, bufnr)
-    tw_highlight.setup(client, bufnr, {
-      single_column = false,
-      mode = 'background',
-      debounce = 200,
-    })
-  end,
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
   capabilities = lsp_defaults.capabilities
-})
+}
+
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = lsp_defaults.capabilities
+}
+
+lspconfig.astro.setup {
+  on_attach = on_attach,
+  capabilities = lsp_defaults.capabilitieses
+}
 
 
 -- Server lua
 lspconfig.sumneko_lua.setup {
+  capabilities = lsp_defaults.capabilities,
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
-  end,
-  capabilities = lsp_defaults.capabilities,
+  end,  
   settings = {
     Lua = {
       diagnostics = {
@@ -113,3 +118,4 @@ lspconfig.sumneko_lua.setup {
 ---
 --source: https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
 ---
+
