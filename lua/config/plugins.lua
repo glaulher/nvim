@@ -13,28 +13,6 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use { 'goolord/alpha-nvim' } -- Dashboard
 
-
-  -- Completions
-  --  use({
-  --    "hrsh7th/nvim-cmp",
-  --    requires = {
-  --      { "hrsh7th/cmp-nvim-lsp" }, -- nvim-cmp source for neovim's built-in LSP
-  --      { "hrsh7th/cmp-nvim-lua" },
-  --      { "hrsh7th/cmp-buffer" }, -- nvim-cmp source for buffer words
-  --      { "hrsh7th/cmp-path" },
-  --      { "hrsh7th/cmp-cmdline" },
-  --      { "hrsh7th/vim-vsnip" },
-  --      { "hrsh7th/cmp-vsnip" },
-  --      { "hrsh7th/vim-vsnip-integ" },
-  --      { "hrsh7th/cmp-calc" },
-  --      { "rafamadriz/friendly-snippets" },
-  --    },
-  --  })
-
-
-  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
@@ -47,25 +25,24 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'princejoogie/tailwind-highlight.nvim'
   use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
-
+  use 'rafamadriz/friendly-snippets'
+  use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' } --tabnine
 
   -- Toggle Terminal
   use 'akinsho/toggleterm.nvim'
---  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
---    require("toggleterm").setup()
---  end }
 
   -- File Search
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-  -- use({
-  --   "nvim-telescope/telescope.nvim",
-  --   requires = { "nvim-lua/popup.nvim", "nvim-lua/plenary.nvim" },
-  --   cmd = "Telescope",
-  -- })
 
   --  use { 'nvim-telescope/telescope-file-browser.nvim' }
 

@@ -2,7 +2,7 @@
 
 local multirg = require('config.telescope-multi-rg')
 local keymap = vim.keymap
-
+local opts = { silent = true }
 -- Remap space as leader key
 --map('', '<Space>', '<Nop>') -- Unmap space
 --vim.g.mapleader = ' '
@@ -64,16 +64,16 @@ keymap.set("n", "<C-f>", function()
 end) --Normal
 
 -- copy and paste
-keymap.set("x", "<C-c>","y<CR>", { silent = true }) --Visual
-keymap.set("x", "<C-v>","p<CR>", { silent = true }) --Visual
-keymap.set("i", "<C-v>","<ESC>:-1<CR>p<CR>", { silent = true }) --Insert
-keymap.set("i", "<C-c>","<ESC>yy<CR>", { silent = true }) --Insert
-keymap.set("n", "<C-c>","yy<CR>", { silent = true }) --Normal
+keymap.set("x", "<C-c>", "y<CR>", opts) --Visual
+keymap.set("x", "<C-v>", "p<CR>", opts) --Visual
+keymap.set("i", "<C-v>", "<ESC>:-1<CR>p<CR>", opts) --Insert
+keymap.set("i", "<C-c>", "<ESC>yy<CR>", opts) --Insert
+keymap.set("n", "<C-c>", "yy<CR>", opts) --Normal
 -- Use p to paste Normal mode
 
 -- Move line
-keymap.set("x", "<C-UP>", ":move '<-2<CR>gv-gv", { silent = true }) --Visual
-keymap.set("x", "<C-DOWN>", ":move '>+1<CR>gv-gv", { silent = true }) --Visual
+keymap.set("x", "<C-UP>", ":move '<-2<CR>gv-gv", opts) --Visual
+keymap.set("x", "<C-DOWN>", ":move '>+1<CR>gv-gv", opts) --Visual
 
 vim.cmd([[ nmap <C-UP> :m-2<CR> ]]) -- Normal
 vim.cmd([[ nmap <C-DOWN> :m+1<CR> ]]) -- Normal
@@ -90,6 +90,15 @@ vim.cmd([[ vnoremap <C-s> <Esc>:w<CR> ]])
 vim.cmd([[ nnoremap <z-a> za]]) -- Fold colapse
 vim.cmd([[ nnoremap e :edit<CR>]]) -- Reset Bug Fold colapse
 
+
+
+keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
+keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
+
+
+
 ------------------------------
 -- Keybinds in some plugins --
 ------------------------------
@@ -105,6 +114,3 @@ vim.cmd([[ nnoremap e :edit<CR>]]) -- Reset Bug Fold colapse
 
 -- ZenMode (full screen in terminal)
 -- :ZenMode
-
-
-
