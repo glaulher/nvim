@@ -103,7 +103,7 @@ git clone https://github.com/glaulher/nvim ~/.config/nvim --depth 1 && nvim
 :TSUpdate
 
 -- Close nvim and open again 
-:Mason -- install eslint_d e prettier,  keys 1 - 5 navigation, position above package and press i to install.
+:Mason -- install eslint_d e prettierd,  keys 1 - 5 navigation, position above package and press i to install.
 :checkhealth   -- check if everything is ok
 ```
 
