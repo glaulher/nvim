@@ -24,6 +24,11 @@ Requirements: Neovim | Lua
 - [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - nvim-cmp source for neovim's built-in LSP
 - [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer) - nvim-cmp source for buffer words
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - A completion engine plugin for neovim written in Lua
+- [hrsh7th/cmp-path](https://github.com/hrsh7th/cmp-path) - nvim-cmp source for path
+- [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) - nvim-cmp source for vim's cmdline
+- [saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip) - luasnip completion source for nvim-cmp
+- [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets) - :Set of preconfigured snippets for different languages
+- [tzachar/cmp-tabnine](https://github.com/tzachar/cmp-tabnine) - TabNine plugin for hrsh7th/nvim-cmp
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - A collection of configurations for Neovim's built-in LSP
 - [jose-elias-alvarez/null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) - Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
 - [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) - Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters
@@ -88,21 +93,19 @@ git clone https://github.com/glaulher/nvim ~/.config/nvim --depth 1 && nvim
 
 -- Open nvim  
 :PackerInstall
- 
+
 -- View error - close nvim
 :q!
- 
+
 -- Open nvim 
 :PackerSync
 
 :TSUpdate
- 
+
 -- Close nvim and open again 
 :Mason -- install eslint_d e prettier,  keys 1 - 5 navigation, position above package and press i to install.
 :checkhealth   -- check if everything is ok
 ```
-
-
 
 ---
 
@@ -147,8 +150,6 @@ ZenMode enter command mode
 ```lua
 :ZenMode
 ```
-
-
 
 ---
 
