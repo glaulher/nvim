@@ -145,6 +145,25 @@ I - insert
 | Alt+3     | 𝐍       | ToggleTerm htop         |
 | ctrl+d    | 𝐍       | Multi cursor            |
 
+
+
+## LSP Keybinds
+
+| Key    | Mode | Action                 |
+| ------ | ---- | ---------------------- |
+| UP     | 𝐈   | select_prev_item       |
+| DOWN   | 𝐈   | select_next_item       |
+| ctrl+e | 𝐈   | mapping.abort          |
+| TAB    | 𝐈   | select_next_item       |
+| TAB+s  | 𝐈   | select_prev_item       |
+| k      | 𝐍   | information hover      |
+| gi     | 𝐍   | implementation         |
+| ctrl+k | 𝐍   | buf.signature_help     |
+| gd     | 𝐍   | Jump to the definition |
+| gD     | 𝐍   | Jump to declaration    |
+
+
+
 ZenMode enter command mode
 
 ```lua
