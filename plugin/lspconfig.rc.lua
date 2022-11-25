@@ -98,7 +98,7 @@ lspconfig.sumneko_lua.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
-  end,  
+  end,
   settings = {
     Lua = {
       diagnostics = {
@@ -118,4 +118,3 @@ lspconfig.sumneko_lua.setup {
 ---
 --source: https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
 ---
-
