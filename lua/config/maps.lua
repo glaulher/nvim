@@ -72,13 +72,13 @@ keymap.set("n", "<C-c>", "yy<CR>", opts) --Normal
 -- Use p to paste Normal mode
 
 -- Move line
-keymap.set("x", "<C-UP>", ":move '<-2<CR>gv-gv", opts) --Visual
-keymap.set("x", "<C-DOWN>", ":move '>+1<CR>gv-gv", opts) --Visual
+keymap.set("x", "<M-UP>", ":move '<-2<CR>gv-gv", opts) --Visual
+keymap.set("x", "<M-DOWN>", ":move '>+1<CR>gv-gv", opts) --Visual
 
-vim.cmd([[ nmap <C-UP> :m-2<CR> ]]) -- Normal
-vim.cmd([[ nmap <C-DOWN> :m+1<CR> ]]) -- Normal
-vim.cmd([[ imap <C-UP> <Esc> :m-2<CR>l ]]) -- Insert
-vim.cmd([[ imap <C-DOWN> <Esc> :m+1<CR>l ]]) -- Insert
+vim.cmd([[ nmap <M-UP> :m-2<CR> ]]) -- Normal
+vim.cmd([[ nmap <M-DOWN> :m+1<CR> ]]) -- Normal
+vim.cmd([[ imap <M-UP> <Esc> :m-2<CR>l ]]) -- Insert
+vim.cmd([[ imap <M-DOWN> <Esc> :m+1<CR>l ]]) -- Insert
 
 -- Save with 'Ctrl + S'  mods: Normal, Inserção e Visual
 -- Need add line: stty -ixon , in ~/.bashrc
