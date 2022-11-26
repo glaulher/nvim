@@ -133,8 +133,8 @@ I - insert
 | ctrl+c    | 𝐍 𝐕 𝐈 | Copy                    |
 | ctrl+v    | 𝐕 𝐈    | paste                   |
 | p         | 𝐍       | paste                   |
-| ctrl+up   | 𝐍 𝐕 𝐈 | move text up            |
-| ctrl+down | 𝐍 𝐕 𝐈 | move text down          |
+| alt+up    | 𝐍 𝐕 𝐈 | move text up            |
+| alt+down  | 𝐍 𝐕 𝐈 | move text down          |
 | ctrl+s    | 𝐍 𝐕 𝐈 | Save                    |
 | za        | 𝐍       | Fold code               |
 | tb        | 𝐕       | comment line            |
