@@ -19,7 +19,7 @@ if (not status) then return end
 
 local luasnip = require('luasnip')
 local lspkind = require 'lspkind'
-local tabnine = require('cmp_tabnine.config')
+-- local tabnine = require('cmp_tabnine.config')
 
 ---
 -- nvim-cmp doesn't "know" how to expand a snippet, that's why we need luasnip
@@ -31,13 +31,13 @@ local select_opts = { behavior = cmp.SelectBehavior.Select }
 -- Tabnine
 ---
 
-tabnine:setup({
-  max_lines = 1000;
-  max_num_results = 20;
-  sort = true;
-  run_on_every_keystroke = true;
-  snippet_placeholder = '..';
-})
+--tabnine:setup({
+--  max_lines = 1000;
+--  max_num_results = 20;
+--  sort = true;
+--  run_on_every_keystroke = true;
+--  snippet_placeholder = '..';
+--})
 
 ---
 -- nvim-cmp's options
@@ -52,7 +52,7 @@ cmp.setup({
   sources = {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
-    { name = 'cmp_tabnine' },
+--    { name = 'cmp_tabnine' },
     { name = 'luasnip' },
     { name = 'path' },
     { name = 'nvim_lua' },
