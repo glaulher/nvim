@@ -50,9 +50,9 @@ keymap.set('', 'sl', '<C-w>l')
 
 -- nvimTree
 
-keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
-keymap.set('i', '<C-n>', '<Esc>:NvimTreeToggle<CR>l')
-keymap.set('v', '<C-n>', ':NvimTreeToggle<CR>')
+keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>')
+keymap.set('i', '<C-b>', '<Esc>:NvimTreeToggle<CR>l')
+keymap.set('v', '<C-b>', ':NvimTreeToggle<CR>')
 
 -- Closed
 keymap.set('n', 'q', ':q<CR>')

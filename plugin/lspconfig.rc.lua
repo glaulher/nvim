@@ -93,8 +93,8 @@ lspconfig.astro.setup {
 
 
 -- Server lua
-lspconfig.sumneko_lua.setup {
-  capabilities = lsp_defaults.capabilities,
+lspconfig.lua_ls.setup {
+  capabilities = capabilities,
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
