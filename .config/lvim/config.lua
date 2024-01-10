@@ -38,17 +38,7 @@ lvim.plugins = {
 }
 
 
--- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
---vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
---vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
-
--- Setup required for ufo
---local capabilities = vim.lsp.protocol.make_client_capabilities()
---capabilities.textDocument.foldingRange = {
---  dynamicRegistration = false,
---  lineFoldingOnly = true
---}
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
@@ -73,3 +63,10 @@ formatters.setup {
 }
 
 lvim.format_on_save.enabled = true
+
+-- "/texto a ser localizado" teclar enter depois / e enter para ir para a próxima ocorrência
+-- %s/texto a trocar/trocado/g
+-- zo  abre o bloco de código
+-- zc fecha o bloco de código
+-- alt + j ou k para movimentar a linha
+-- ctrl + n igual ao ctrl + d do vscode
