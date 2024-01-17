@@ -70,3 +70,4 @@ lvim.format_on_save.enabled = true
 -- zc fecha o bloco de código
 -- alt + j ou k para movimentar a linha
 -- ctrl + n igual ao ctrl + d do vscode
+-- ctrl + shift + w move entre o buffer e o nvim-tree
