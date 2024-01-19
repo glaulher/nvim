@@ -13,6 +13,9 @@ lvim.plugins = {
     'mg979/vim-visual-multi',
   },
   {
+    'brenoprata10/nvim-highlight-colors'
+  },
+  {
     'kevinhwang91/nvim-ufo',
     dependencies = { 'kevinhwang91/promise-async' },
     opts = {
@@ -37,7 +40,7 @@ lvim.plugins = {
   }
 }
 
-
+require('nvim-highlight-colors').setup {}
 
 
 local linters = require "lvim.lsp.null-ls.linters"
